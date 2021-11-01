@@ -9,7 +9,7 @@ import { error, defaultModules } from '@pnotify/core';
 
 const refs = {
   input: document.querySelector('input'),
-  list: document.querySelector('.countries-list'),
+  list: document.querySelector('.countries'),
 }
 refs.input.addEventListener('input', _debounce(onInput, 500))
 
@@ -23,7 +23,7 @@ function onInput(e) {
       error({
         title: 'Error',
         text: 'Enter more letters for a more accurate result.',
-        delay: 2000,
+        delay: 1500,
 
       });
       return;
