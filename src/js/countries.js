@@ -1,4 +1,3 @@
-
 import countiesTpl from '../template/countries.hbs'
 import countiesListTpl from '../template/countries-list.hbs'
 import _debounce from 'lodash.debounce'
