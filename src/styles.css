@@ -1,0 +1,12 @@
+li {
+  list-style: none;
+}
+[data-pnotify] .brighttheme-closer,
+[data-pnotify] .brighttheme-icon,
+[data-pnotify] .brighttheme-sticker {
+  display: flex;
+  justify-content: right;
+}
+body {
+  background-color: aqua;
+}

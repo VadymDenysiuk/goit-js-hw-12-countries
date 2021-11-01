@@ -1,0 +1,36 @@
+{{!-- {{#each this}}
+<li>
+    <article class="card mb-3" style="max-width: 540px;">
+      <div class="card-body">
+      <h2>{{name}}</h2>
+      <p class="card-text">Capital: {{capital}}</p>
+      <p class="card-text">Population: {{population}}</p>
+      <ul class="card-list">Languages: {{#each languages}}<li>{{this.name}}</li>{{/each}}</ul></div>
+      <div class="card-img"><img src="{{flag}}" alt="" width="480"></div>
+     
+    </article>
+</li>
+{{/each}} --}}
+{{#each this}}
+<li>
+<article class="card mb-3" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{flag}}" alt="..." class="img-fluid" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">
+          Capital: {{capital}}
+        </p>
+        <p class="card-text">
+          Population: {{population}}
+          </p>
+          <ul class="card-text">Languages: {{#each languages}}<li>{{this.name}}</li>{{/each}}</ul>
+      </div>
+    </div>
+  </div>
+    </article>
+</li>
+{{/each}}
