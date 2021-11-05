@@ -17,7 +17,6 @@ const searchCountries = new SearchCountries()
 function onInput(e) {
   const searchQuery = searchCountries.query = e.target.value;
   searchCountries.fetchCountries(searchQuery).then(countries => {
-    console.log('')
     if (countries.length >= 10) {
       cleanCountriesContainer() 
       error({
@@ -49,9 +48,7 @@ function onInput(e) {
     else {
       cleanCountriesContainer()
     } 
-
   })
-
 }
 
 function appendCountriesMarkup(countries) {
