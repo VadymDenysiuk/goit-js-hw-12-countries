@@ -17,13 +17,13 @@ const searchCountries = new SearchCountries()
 function onInput(e) {
   const searchQuery = searchCountries.query = e.target.value;
   searchCountries.fetchCountries(searchQuery).then(countries => {
+    console.log('')
     if (countries.length >= 10) {
       cleanCountriesContainer() 
       error({
         title: 'Error',
         text: 'Enter more letters for a more accurate result.',
         delay: 1500,
-
       });
       return;
     }
@@ -37,8 +37,17 @@ function onInput(e) {
       appendCountriesMarkup(countries);
       return;
     }
+    else if (!countries.length) {
+        cleanCountriesContainer();
+        error({
+        title: 'Error',
+        text: 'No matches found for this query',
+        delay: 1500,
+      });
+      return;
+    }
     else {
-      cleanCountriesContainer() 
+      cleanCountriesContainer()
     } 
 
   })
